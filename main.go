@@ -31,7 +31,8 @@ func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
 }
 
 func init() {
-	err := cpu.Init("test.ch8")
+	err := cpu.Init("games/Rush Hour [Hap, 2006].ch8")
+	//err := cpu.Init("test.ch8")
 	if err != nil {
 		panic(err)
 	}
@@ -40,6 +41,7 @@ func init() {
 func main() {
 	ebiten.SetWindowSize(1024, 512)
 	ebiten.SetWindowTitle("Go Chip8")
+	ebiten.SetWindowResizingMode(ebiten.WindowResizingModeEnabled)
 	if err := ebiten.RunGame(&Game{}); err != nil {
 		panic(err)
 	}

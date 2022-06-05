@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"image/color"
 
 	"github.com/hajimehoshi/ebiten/v2"
@@ -27,7 +26,6 @@ func (d *Display) FlipPixel(x, y int, isTrue bool) bool {
 	}
 
 	if x < 0 || x > 63 || y < 0 || y > 31 {
-		fmt.Println("ERROR: Pixel outisde of image")
 		return false
 	}
 
